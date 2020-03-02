@@ -1,0 +1,36 @@
+{
+    memory_controller1: {
+        ce_count: ---
+        ce_noinfo_count: ---
+        mc_name: ---
+        reset_counters: (action)
+        sdram_scrub_rate: ---
+        seconds_since_reset: ---
+        size_mb: ---
+        ue_count: ---
+        ue_noinfo_count: ---
+
+        csrow0: {
+            ce_count: ---
+            ch0_ce_count: ---
+            ch0_dimm_label: ---
+            dev_type: ---
+            edac_mode: ---
+            mem_type: ---
+            size_mb: ---
+            ue_count: ---
+        }
+        csrow1: {
+            ce_count: ---
+            ch0_ce_count: ---
+            ch0_dimm_label: ---
+            dev_type: ---
+            edac_mode: ---
+            mem_type: ---
+            size_mb: ---
+            ue_count: ---
+        }
+        ....
+    }
+    ....
+}
