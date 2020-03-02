@@ -67,19 +67,19 @@ func (mc MemoryControllerStruct) Stats() (*MemoryControllerStats, error) {
 				return nil, err
 			}
 		case "ue_count":
-			if err = valueInt64(p, &mcStats.UECount); err != nil {
+			if err = valueInt64(p, &mcStats.UncorrectableErrors); err != nil {
 				return nil, err
 			}
 		case "ue_noinfo_count":
-			if err = valueInt64(p, &mcStats.UENoinfoCount); err != nil {
+			if err = valueInt64(p, &mcStats.UncorrectableErrorsNoinfo); err != nil {
 				return nil, err
 			}
 		case "ce_count":
-			if err = valueInt64(p, &mcStats.CECount); err != nil {
+			if err = valueInt64(p, &mcStats.CorrectableErrors); err != nil {
 				return nil, err
 			}
 		case "ce_noinfo_count":
-			if err = valueInt64(p, &mcStats.CENoinfoCount); err != nil {
+			if err = valueInt64(p, &mcStats.CorrectableErrorsNoinfo); err != nil {
 				return nil, err
 			}
 		case "size_mb":

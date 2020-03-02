@@ -19,15 +19,15 @@ type MemoryControllerStruct struct {
 
 // MemoryControllerStats comment
 type MemoryControllerStats struct {
-	SecondsSinceReset int64
-	MCName            string
-	SizeMB            int64
-	UECount           int64
-	UENoinfoCount     int64
-	CECount           int64
-	CENoinfoCount     int64
-	SDRAMScrubRate    int64
-	MaxLocation       string
+	SecondsSinceReset         int64
+	MCName                    string
+	SizeMB                    int64
+	UncorrectableErrors       int64
+	UncorrectableErrorsNoinfo int64
+	CorrectableErrors         int64
+	CorrectableErrorsNoinfo   int64
+	SDRAMScrubRate            int64
+	MaxLocation               string
 }
 
 // ChipSelectRowStruct comment
@@ -37,7 +37,7 @@ type ChipSelectRowStruct struct {
 
 // ChipSelectRowStats comment
 type ChipSelectRowStats struct {
-	Size                      int64  // size_mb
+	SizeMB                    int64  // size_mb
 	EdacMode                  string // edac_mode
 	DeviceType                string // dev_type
 	MemoryType                string // mem_type

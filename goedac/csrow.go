@@ -69,7 +69,7 @@ func (csr ChipSelectRowStruct) Stats() (*ChipSelectRowStats, error) {
 		p := filepath.Join(dir, f)
 		switch f {
 		case "size_mb":
-			if err = valueInt64(p, &csrStats.Size); err != nil {
+			if err = valueInt64(p, &csrStats.SizeMB); err != nil {
 				return nil, err
 			}
 		case "edac_mode":
