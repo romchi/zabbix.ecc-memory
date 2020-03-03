@@ -18,30 +18,30 @@ func MemoryControllersList() ([]string, error) {
 		return nil, err
 	}
 
-	memoryControllers := make([]string, len(files))
+	result := make([]string, len(files))
 	for ctr, name := range files {
-		memoryControllers[ctr] = filepath.Base(name)
+		result[ctr] = filepath.Base(name)
 	}
 
-	return memoryControllers, nil
+	return result, nil
 }
 
-// MemoryControllers comment
+// MemoryControllers return list of MemoryControllerStruct
 func MemoryControllers() ([]MemoryControllerStruct, error) {
 	controllerList, err := MemoryControllersList()
 	if err != nil {
 		return nil, err
 	}
 
-	memoryControllers := make([]MemoryControllerStruct, len(controllerList))
+	result := make([]MemoryControllerStruct, len(controllerList))
 	for ctr, num := range controllerList {
-		memoryControllers[ctr] = MemoryControllerStruct{Name: filepath.Base(num)}
+		result[ctr] = MemoryControllerStruct{Name: filepath.Base(num)}
 	}
 
-	return memoryControllers, nil
+	return result, nil
 }
 
-// Stats comment
+// Stats get statistic for memory controller
 func (mc MemoryControllerStruct) Stats() (*MemoryControllerStats, error) {
 	dir := filepath.Join(mcPath, mc.Name)
 

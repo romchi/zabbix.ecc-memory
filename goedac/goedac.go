@@ -5,7 +5,6 @@ import (
 	"os"
 	"strconv"
 	"strings"
-	//"github.com/multiplay/go-edac/lib/edac"
 )
 
 var (
@@ -17,25 +16,25 @@ type MemoryControllerStruct struct {
 	Name string
 }
 
-// MemoryControllerStats comment
+// MemoryControllerStats structure
 type MemoryControllerStats struct {
-	SecondsSinceReset         int64
-	MCName                    string
-	SizeMB                    int64
-	UncorrectableErrors       int64
-	UncorrectableErrorsNoinfo int64
-	CorrectableErrors         int64
-	CorrectableErrorsNoinfo   int64
-	SDRAMScrubRate            int64
-	MaxLocation               string
+	SecondsSinceReset         int64  // seconds_since_reset
+	MCName                    string // mc_name
+	SizeMB                    int64  // size_mb
+	UncorrectableErrors       int64  // ue_count
+	UncorrectableErrorsNoinfo int64  // ue_noinfo_count
+	CorrectableErrors         int64  // ce_count
+	CorrectableErrorsNoinfo   int64  // ce_noinfo_count
+	SDRAMScrubRate            int64  // sdram_scrub_rate
+	MaxLocation               string // max_location
 }
 
-// ChipSelectRowStruct comment
+// ChipSelectRowStruct structure
 type ChipSelectRowStruct struct {
 	Name string
 }
 
-// ChipSelectRowStats comment
+// ChipSelectRowStats structure
 type ChipSelectRowStats struct {
 	SizeMB                    int64  // size_mb
 	EdacMode                  string // edac_mode
